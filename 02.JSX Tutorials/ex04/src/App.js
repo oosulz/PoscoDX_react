@@ -1,18 +1,21 @@
-import React from "react";
+import React, { useReducer } from "react";
 import Header from "./Header";
 import Contents from "./Contents";
 
 React.createElement("div", Header, null, React.createElement);
 
 function App() {
-  /*   return (
-    <div>
-      <Header />
-      <Contents />
-      <p>함수 컴포넌트</p>
-    </div>
-  ); */
 
+    const refDiv = useRef(null);
+
+     return (
+    <div
+      id="App"
+      ref={refDiv}>
+      {'TEST01'}
+    </div>
+  ); 
+  /*
   return React.createElement(
     "div",
     { id: "App" },
@@ -21,5 +24,5 @@ function App() {
     React.createElement("p", null, "함수 컴포넌트")
   );
 }
-
+*/
 export { App };
