@@ -9,23 +9,11 @@ export default function App() {
       hours: now.getHours(),
       minutes: now.getMinutes(),
       seconds: now.getSeconds(),
-      ticks: 0,
     };
   };
 
   const [currentTime, setCurrentTime] = useState(getCurrentTime());
   const [ticks, setTicks] = useState(0);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentTime((currentTime) => getCurrentTime());
-      setTicks((ticks) => ticks + 1);
-    }, 1000);
-
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, []);
 
   return (
     <Clock
