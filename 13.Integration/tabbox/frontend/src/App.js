@@ -1,18 +1,13 @@
-import React from "react";
-import "./assets/css/styles.css";
-import data from "./assets/json/data.js";
-import Tabs from "./Tabs";
-import TabView from "./Tabview";
+import React from 'react';
+import TabBox from './TabBox';
+import './assets/scss/App.scss';
 
 function App(props) {
-  return (
-    <div id={"App"}>
-      <div className={"tab-box"}>
-        <Tabs tabs={data} />
-        <TabView tabs={data}></TabView>
-      </div>
-    </div>
-  );
+    return (
+        <div id={'App'}>
+             <TabBox/>
+        </div>
+    );
 }
 
 export default App;

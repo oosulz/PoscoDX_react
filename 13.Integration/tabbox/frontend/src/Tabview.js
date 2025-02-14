@@ -1,14 +1,12 @@
-import React from "react";
+import React from 'react';
+import {Tab_View} from './assets/scss/TabView.scss';
 
-function TabView({ tabs }) {
-  const activeTab = tabs.find((tab) => tab.active) || tabs[0];
-  console.log(activeTab);
-
-  return (
-    <div>
-      <strong>{activeTab.contents}</strong>
-    </div>
-  );
+function TabView({contents}) {
+    return (
+        <div className={Tab_View}>
+            {contents}
+        </div>
+    );
 }
 
 export default TabView;
