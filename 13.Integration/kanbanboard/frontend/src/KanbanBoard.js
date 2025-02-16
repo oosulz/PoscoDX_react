@@ -1,6 +1,7 @@
 import React from "react";
 import CardList from "./CardList.js";
 import data from "./assets/json/data.js";
+import "./assets/scss/KanbanBoard.scss";
 
 function KanbanBoard() {
   const [cards, setCards] = React.useState(data);

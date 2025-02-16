@@ -2,20 +2,20 @@ import React from "react";
 import Card from "./Card";
 import { Card_List } from "./assets/scss/CardList.scss";
 
-function CardList({ status, cards }) {
+const CardList = ({ title, cards }) => {
   return (
-    <div className="Card_List">
-      <h1>{status}</h1>
+    <div className={Card_List}>
+      <h1>{title}</h1>
       {cards.map((card) => (
-        <li key={card.no}>
-          <Card
-            title={card.title}
-            description={card.description}
-            tasks={card.tasks}
-          />
-        </li>
+        <Card
+          key={card.no}
+          title={card.title}
+          description={card.description}
+          tasks={card.tasks}
+        />
       ))}
     </div>
   );
-}
+};
+
 export default CardList;
